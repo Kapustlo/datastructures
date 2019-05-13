@@ -1,69 +1,65 @@
 Currently available data structures:
+===================================
   1. Stack
   2. Graph
   3. Tree
 
 Module utils:
-  from datastructures.utils.utils import *
+=============
+from datastructures.utils.utils import *
 
-  Accepts a list of objects that get converted into string and returns the length of the longest one
+longest_string(list)
+--------------------
+Accepts a list of objects that get converted into string and returns the length of the longest one
 
-  longest_string(list)
+Example:
 
-  Example:
-
-    a = longest_string(["A","BBB","New York"])
-    print(a)
-
-    >> 8
+``` python
+  a = longest_string(["A","BBB","New York"])
+  print(a)
+  # prints 8
+```
 
 Module datastructures:
+=====================
+Module stack
+------------
+**from datastructures.stack import Stack**
 
-  1. Module stack:
-      from datastructures.stack import Stack
+### Constructor:
+Accepts any objects and as much as you want as its constructor parameters
 
-      Constructor:
+``` python
+stack = Stack(1,2,"3",[1,2,3,4])
+```
 
-        Accepts any objects and as much as you want as its constructor parameters
+### Fields:
+**self.items - Every item stored in the stack**
 
-        stack = Stack(1,2,"3",[1,2,3,4])
+### Methods:
 
-      Fields:
+#### self.get_stack()
+Returns a stringified stack visualisation
 
-        self.items - Every item stored in the stack
+####  self.get_all_as_list()
+Returns a tuple of items stored in the stack
 
-      Methods:
+####  self.push(*args)
+Pushes as many objects as you passed as parameters
 
-        Returns a stringified stack visualisation
+#### self.pop()
+Pops the element on top of the stack and returns it
 
-        get_stack()
+#### self.last()
+Returns the item on top of the stack
 
-        Returns a tuple of items stored in the stack
+#### self.size()
+Returns the size of the stack
 
-        get_all_as_list()
+#### self.is_empty()
+Returns whether the stack is empty or not
 
-        Pushes as many objects as you passed as parameters
+#### self.count(param)
+Counts how many items are equal to the one passed as the parameter
 
-        push(*args)
-
-        Pops the element on top of the stack and returns it
-
-        pop()
-
-        Returns the item on top of the stack
-
-        last()
-
-        Returns the size of the stack
-
-        size()
-
-        Returns whether the stack is empty or not
-
-        is_empty()
-
-        Counts how many items are equal to the one passed as the parameter
-
-        count(param)
-        
-// Update of README will come out soon
+// README update coming soon
