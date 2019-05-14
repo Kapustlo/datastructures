@@ -22,17 +22,16 @@ class Node:
     def _add_parent(self,parent):
         self.parents.append(parent)
     def get_parents(self):
-        return [parent.name for parent in self.parents]
+        return tuple([parent.name for parent in self.parents])
     def get_ancestors(self):
-        return [ancestor.name for ancestor in self.ancestors]
+        return tuple([ancestor.name for ancestor in self.ancestors])
     def get_paths(self,node_list=None):
         if node_list != None:
             for index, path in enumerate(self.paths):
                 opposite_node = path.get_opposite(self)
                 if not opposite_node.name in node_list:
                     self.paths.pop(index)
-        print(self.paths)
-        return self.paths
+        return tuple(self.paths)
     def _remove_paths(self,node):
         for index, path in enumerate(self.paths):
             opposite_node = path.get_opposite(self)
