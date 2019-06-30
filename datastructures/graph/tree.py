@@ -22,12 +22,12 @@ class Tree(Graph):
                 level = 1
         # If the node is not on top, then it needs parents
         if (level > 1 and len(parents) == 0) or self.names.count(name) > 0:
-            raise ValueError
+            raise ValueError("A node must have a parent if its level is greater than 1")
         else:
             for index, parent in enumerate(parents):
                 # Parent must not be lower than child
                 if parent.level >= level:
-                    raise ValueError
+                    raise ValueError("Parent must not be lower than its children")
                 else:
                     # In case there is a string, we call this method
                     parents[index] = self.get_node(parent)
