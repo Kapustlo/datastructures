@@ -142,11 +142,11 @@ graph.get_distance(node_from, node_to) # Pass node objects or names and get the 
 ```
 ### Iterating
 
-Iterating over a graph returns its nodes
+Iterating over a graph returns its node objects
 
 ``` python
-
-
+for node in graph:
+    print(node.value)
 ```
 
 Module Tree
