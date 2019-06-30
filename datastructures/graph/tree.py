@@ -16,10 +16,7 @@ class Tree(Graph):
         self.levels = 0
     def add_node(self,name,value,parents=[],level=None):
         if not level:
-            if len(parents):
-                level = parents[0].level + 1
-            else:
-                level = 1
+            level = parents[0].level + 1 if len(parents) else 1
         # If the node is not on top, then it needs parents
         if (level > 1 and len(parents) == 0) or self.names.count(name) > 0:
             raise ValueError("A node must have a parent if its level is greater than 1")
