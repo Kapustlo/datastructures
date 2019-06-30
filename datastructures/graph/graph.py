@@ -12,6 +12,8 @@ class Graph:
         """
         self.nodes = {}
         self.paths = [] # Path objects
+    def __iter__(self):
+        return iter([self.nodes[node] for node in self.nodes])
     def get_node(self,name):
         type_name = type(name).__name__
         if type_name == 'Node':
@@ -20,7 +22,7 @@ class Graph:
             return self.nodes[str(name)]
     def add_node(self,name):
         node = Node(name)
-        self.nodes[str(name)] = node;
+        self.nodes[str(name)] = node
         return node
     def connect_nodes(self,first,second,weight):
         first = self.get_node(first)
