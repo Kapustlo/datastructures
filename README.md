@@ -96,6 +96,8 @@ node.get_parents() #(tuple)
 node.get_ancestors() #(tuple)
 node.get_paths() #(tuple)
 ```
+**nodeInstance1 + nodeInstance2 = nodeInstance1.value + nodeInstance2.value**
+
 Module Path
 -----------
 ``` python
@@ -138,13 +140,22 @@ graph.remove_node(name or nodeObject) #(path object)
 graph.get_paths() #Returns a stringified visualisation on paths
 graph.get_distance(node_from, node_to) # Pass node objects or names and get the shortest distance between them (uses Dijkstra's algorithm so it will only work for paths with positive values) (number)
 ```
+### Iterating
+
+Iterating over a graph returns its nodes
+
+``` python
+
+
+```
+
 Module Tree
 -----------
 ``` python
 from datastructures.graph.tree import Tree
 ```
 ### Constructor:
-``` python 
+``` python
 #Inherits all fields and methods of Graph
 tree = Tree()
 ```
