@@ -10,6 +10,8 @@ class Node:
         self.paths = []
         for parent in self.parents:
             self.ancestors.extend(parent.ancestors)
+    def __add__(self, other):
+        return self.value + other.value
     def _add_child(self,child):
         self.children.append(child)
     def _remove_child(self,child):
