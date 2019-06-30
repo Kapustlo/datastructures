@@ -4,7 +4,8 @@ class Path:
         self.second = second
         self.weight = weight
     def get_opposite(self,node):
-        if node.name == self.first.name:
+        node_name = node.name
+        if node_name == self.first.name:
             return self.second
-        else:
+        elif node_name == self.second.name:
             return self.first
